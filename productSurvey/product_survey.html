@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Comentarios sobnbre Marca de Lujo</title>
+    </head>
+    <body>
+        <h1>Bienvenido a los Comentarios sobre Productos de Marca de Lujo</h1>
+        <h2>Proporciona tu comentario</h2>
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" placeholder="Tu nombre" required><br>
+
+        <label for="age">Edad:</label><br>
+        <input type="number" id="age" placeholder="Tu edad" required><br>
+
+        <label for="email">Correo Electronico:</label><br>
+        <input type="email" id="email" placeholder="Tu correo electronico" required><br>
+
+        <label for="job">Trabajo:</label><br>
+        <input type="text" id="job" placeholder="Tu trabajo" required><br>
+
+        <label for="designation">Designacion:</label><br>
+        <input type="text" id="designation" placeholder="Tu designacion" required><br>
+
+        <label for="productType">Tipo de Producto:</label><br>
+        <select id="productType" required>
+            <option value="perfume">Perfume</option>
+            <option value="cream">Crema</option>
+            <option value="oils">Aceites</option>
+        </select><br>
+
+        <label for="feedbackText">Comentarios:</label><br>
+        <textarea id="feedbackText" cols="30" rows="5" placeholder="Ingresa tus comentarios aqui" required></textarea><br>
+
+        <button id="submitBtn">Enviar Comentarios</button>
+        <hr>
+        <div id="userInfo" style="display: none;">
+            <h2>Informacion del Usuario:</h2>
+            <p>Nombre: <span id="userName"></span></p>
+            <p>Edad: <span id="userAge"></span></p>
+            <p>Correo Electronico: <span id="userEmail"></span></p>
+            <p>Trabajo: <span id="userJob"></span></p>
+            <p>Designacion: <span id=userDesignation></span></p>
+            <p>Comentarios para: <span id="userProductChoice"></span>: <span id="userFeedback"></span></p>
+        </div>
+        <script src="./product_survey.js"></script>
+    </body>
+</html>
