@@ -26,14 +26,15 @@ function showbooks() {
     <p><strong>Nombre del autor:</strong>${book.authorName}</p>
     <p><strong>Descripcion del libro:</strong>${book.bookDescription}</p>
     <p><strong>Numero de paginas:</strong>${book.pagesNumber} pagina(s)</p>
-    <button onclick="editbook(${index})">Editar</button>`
+    <button onclick="editbook(${index})">Editar</button>
+    <button onclick="deleteBook(${index})">Eliminar</button>`
     );
     document.getElementById('books').innerHTML = booksDiv.join(''); // El metodo join se emplea para concatenar todos los elementos HTML generados papra cada libro en una sola cadena
 }
 
 function editbook(index) {
     const book = books[index];
-    document.getElementById('bookName').value = book.bookName;
+    document.getElementById('bookName').value = book.name;
     document.getElementById('authorName').value = book.authorName;
     document.getElementById('bookDescription').value = book.bookDescription;
     document.getElementById('pagesNumber').value = book.pagesNumber;
@@ -43,7 +44,12 @@ function editbook(index) {
 
 function clearInputs() {
     document.getElementById('bookName').value = '';
-    document.getElementsById('authorName').value = '';
+    document.getElementById('authorName').value = '';
     document.getElementById('bookDescription').value = '';
     document.getElementById('pagesNumber').value = '';
+}
+
+function deleteBook(index) {
+    books.splice(index, 1);
+    showbooks();
 }
